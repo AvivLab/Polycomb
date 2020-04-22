@@ -16,7 +16,9 @@ using HypothesisTests
 #------------------------------------------------------------------------------
 #### Run these 4 lines below when want to run code in julia terminal in Atom ####
 configfile = "constants.jl"
-indir = joinpath("..","input")
+# indir = joinpath("..","input")
+# indir = "input"
+indir = joinpath("/polycomb", "input")
 constantsFile = joinpath(indir, configfile) # constants.jl used is in the input folder in julia folder
 include(constantsFile)
 
@@ -32,6 +34,8 @@ include(constantsFile)
 #	GENETHRESH=parse(Float64, ARGS[5])
 #end
 ### End Added by Aviv
+
+print("Running script...")
 
 include("utilities.jl")
 include("types.jl")
@@ -134,7 +138,8 @@ else
 	timestamp=ARGS[6]
 end
 
-dataIntactAndBrokenoutdir = joinpath("..", "dataOutput")
+# dataIntactAndBrokenoutdir = joinpath("..", "results")
+dataIntactAndBrokenoutdir = "results"
 dataIntactAndBrokensimdir = joinpath(dataIntactAndBrokenoutdir, timestamp)
 # save constants.jl file used for run of this code
 configpath = joinpath(dataIntactAndBrokensimdir, configfile)

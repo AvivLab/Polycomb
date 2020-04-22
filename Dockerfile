@@ -8,12 +8,18 @@ COPY packages.jl /polycomb/packages.jl
 RUN julia packages.jl
 
 # Install Python Dependencies (for upload script)
+RUN apt-get update && \
+    apt-get install -y python3-pip
+
 COPY requirements.txt /polycomb
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 COPY upload.py /polycomb/upload.py
 
-COPY PolycombCode/input/* /polycomb/input
-COPY PolycombCode/src/* /polycomb/src
+COPY PolycombCode/ /polycomb/
 
-ENTRYPOINT ["julia"]
+COPY gcp_service_account.json /polycomb/gcp_service_account.json
+
+ENV GOOGLE_APPLICATION_CREDENTIALS /polycomb/gcp_service_account.json
+
+ENTRYPOINT ["/bin/bash"]

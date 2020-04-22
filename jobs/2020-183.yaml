@@ -1,0 +1,24 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  # Unique key of the Job instance
+  name: polycomb-2020-183
+  annotations:
+    project: polycomb
+spec:
+  template:
+    metadata:
+      name: polycomb
+    spec:
+      containers:
+      - name: polycomb
+        image: gcr.io/kellylab/polycomb
+        command: ["bash", "scripts/2020_183.sh"]
+        resources:
+          requests:
+            memory: "500m"
+            cpu: "250m"
+          limits:
+            memory: "500m"
+            cpu: "500m"
+      restartPolicy: Never
