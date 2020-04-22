@@ -16,9 +16,6 @@ spec:
         command: ["bash", "scripts/2020_18.sh"]
         resources:
           requests:
-            memory: "500m"
-            cpu: "250m"
-          limits:
-            memory: "500m"
-            cpu: "500m"
+            memory: 500Mi
+            cpu: 250m
       restartPolicy: Never

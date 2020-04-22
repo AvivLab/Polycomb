@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   # Unique key of the Job instance
-  name: polycomb-xxx
+  name: polycomb
   annotations:
     project: polycomb
 spec:
@@ -13,12 +13,9 @@ spec:
       containers:
       - name: polycomb
         image: gcr.io/kellylab/polycomb
-        command: ["bash", "echo 'hiii'"]
+        command: ["bash", "scripts/script.sh"]
         resources:
           requests:
-            memory: "500m"
-            cpu: "250m"
-          limits:
-            memory: "500m"
-            cpu: "500m"
+            memory: 500Mi
+            cpu: 250m
       restartPolicy: Never
