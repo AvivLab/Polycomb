@@ -1,0 +1,2 @@
+
+Results for independent trials = 2 and generations = 1000 with randSeedNum = [120, 121, 122, 123]

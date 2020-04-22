@@ -1,0 +1,82 @@
+
+Results for independent trials = 2 and generations = 1000 with randSeedNum = [120, 121, 122, 123]
+Evolved with 2 PRC(S) and removed [1, 2]
+For when test for stability with develstate updated vs initstate:
+Distance when PcG broken & remain in Env 1 = 0.175
+Distance when PcG intact & remain in Env 1 = 0.0
+pvalue = 0.2699996716773545
+Distance when PcG broken and remain in Env 2 = 0.2268
+Distance when PcG intact and remain in Env 2 = 0.0
+pvalue = 0.2699996716773545
+Distances when evolve in one env. but introduce other env.:
+Distance when evolve in env 1 and put in env 2 with PcG broken when compare to env 1 = 0.293
+Distance when evolve in env 1 and put in env 2 with PcG intact when compare to env 1 = 0.2413
+pvalue = 0.9639452436648751
+Distance when evolve in env 1 and put in env 2 with PcG broken when compare to env 2 = 0.2263
+Distance when evolve in env 1 and put in env 2 with PcG intact when compare to env 2 = 0.0015
+pvalue = 0.2699996716773545
+Distance when evolve in env 2 and put in env 1 with PcG broken when compare to env 1 = 0.1736
+Distance when evolve in env 2 and put in env 1 with PcG intact when compare to env 1 = 0.0006
+pvalue = 0.2699996716773545
+Distance when evolve in env 2 and put in env 1 with PcG broken when compare to env 2 = 0.2884
+Distance when evolve in env 2 and put in env 1 with PcG intact when compare to env 2 = 0.2417
+pvalue = 0.9639452436648751
+When introduce new environment: 
+Distance when evovled in env 1 then PcG broken & put in new env vs env 1 develstate = 0.2396
+Distance when evovled in env 1 then PcG intact & put in new env vs env 1 develstate = 0.0428
+pvalue = 0.2699996716773545
+Distance when evovled in env 2 then PcG broken & put in new env vs env 2 develstate = 0.3211
+Distance when evovled in env 2 then PcG intact & put in new env vs env 2 develstate = 0.055
+pvalue = 0.2699996716773545
+pvalue when broken PcG and left in env 1 vs when put in new env = 0.9639452436648751
+pvalue when broken PcG and left in env 2 vs when put in new env = 0.2699996716773545
+Results when PRC intact vs broken in evolved environments and start at initstate instead of develstate:
+Distance to original develstate in env 1 when stay in env 1 & PRC broken = 0.178
+Distance to original develstate in env 1 when stay in env 1 & PRC intact = 0.0003
+Distance to original develstate in env 2 when stay in env 2 & PRC broken = 0.2245
+Distance to original develstate in env 2 when stay in env 2 & PRC intact = 0.0001
+Distance to original develstate in env 1 when replace env 1 with env 2 & PRC broken = 0.2989
+Distance to original develstate in env 1 when replace env 1 with env 2 & PRC intact = 0.0854
+pvalue = 0.2699996716773545
+Distance to original develstate in env 2 when replace env 1 with env 2 & PRC broken = 0.2219
+Distance to original develstate in env 2 when replace env 1 with env 2 & PRC intact = 0.1649
+pvalue = 0.9639452436648751
+Distance to original develstate in env 1 when replace env 2 with env 1 & PRC broken = 0.1747
+Distance to original develstate in env 1 when replace env 2 with env 1 & PRC intact = 0.2078
+pvalue = 0.9639452436648751
+Distance to original develstate in env 2 when replace env 2 with env 1 & PRC broken = 0.2902
+Distance to original develstate in env 2 when replace env 2 with env 1 & PRC intact = 0.0639
+pvalue = 0.2699996716773545
+Distance to optstate in env 1 when replace env 2 with env 1 & PRC broken = 0.1041
+Distance to optstate in env 1 when replace env 2 with env 1 & PRC intact = 0.2856
+pvalue = 0.2699996716773545
+Distance to optstate in env 2 when replace env 2 with env 1 & PRC broken = 0.432
+Distance to optstate in env 2 when replace env 2 with env 1 & PRC intact = 0.3041
+pvalue = 0.2699996716773545
+Distance to optstate in env 1 when replace env 1 with env 2 & PRC broken = 0.2266
+Distance to optstate in env 1 when replace env 1 with env 2 & PRC intact = 0.2457
+pvalue = 0.9639452436648751
+Distance to optstate in env 2 when replace env 1 with env 2 & PRC broken = 0.4113
+Distance to optstate in env 2 when replace env 1 with env 2 & PRC intact = 0.3631
+pvalue = 0.2699996716773545
+Results when introduce new environment:
+Distance btw individuals with PRC intact vs broken when given new env. in place of env 1 = 0.2274
+Distance btw individuals with PRC intact vs broken when given new env. in place of env 2 = 0.2974
+Ratio of PcG genes suppressed/ENVS to distance btw intact & broken when given new env. in place of env 1 = 2.4014
+Ratio of PcG genes suppressed/ENVS to distance btw intact & broken when given new env. in place of env 2 = 1.8853
+Results when introduce new environment when PRC intact vs broken:
+Distance btw individuals with PRC broken in new env vs env 1 = 0.2428
+Distance btw individuals with PRC intact in new env vs env 1 = 0.0426
+pvalue = 0.2699996716773545
+Distance btw individuals with PRC broken in new env vs env 2 = 0.3211
+Distance btw individuals with PRC intact in new env vs env 2 = 0.0543
+pvalue = 0.2699996716773545
+Stability results:
+Number stable individuals with PRC broken when given new env. in place of env 1 = 328.0
+Number stable individuals with PRC intact when given new env. in place of env 1 = 417.5
+Number stable individuals with PRC broken when given new env. in place of env 2 = 299.5
+Number stable individuals with PRC intact when given new env. in place of env 2 = 375.0
+Fitness of pop. in [env1; env2] before evolution = [1.0; 0.621768]
+Fitness of pop. in [env1; env2] after final generation = [0.828841; 0.749971]
+Overall fitness of pop. before & after evolution = 0.3942607660312393 & 0.5742156625630093
+Avg genes suppressed by PRCs = [26.506; 27.62]
