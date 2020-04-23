@@ -1,5 +1,5 @@
 # Parameters for polycomb model (Maryl's version)
-const INDTRIALS = 100 # the number of independent trails to run code to find average environmental
+const INDTRIALS = 5 # the number of independent trails to run code to find average environmental
     # and genetic robustness for these independent trails (use in runMultipleIndependentTrails.jl)
 const INDTRIALSFOLDER = "savedPopsForIndTrialsWithSlidingWinAndActualDistAndSigstrOf6" # name of folder to use that contain the .jld
     # files for the independent populations previously generated using generateSavePopulations() function
@@ -7,7 +7,7 @@ const INDTRIALSFOLDER = "savedPopsForIndTrialsWithSlidingWinAndActualDistAndSigs
 const G = 50 # number of genes per individual, default 10, small 3
 const N = 500 # population size, default 500, small 10 (N individuals)
 const C = 0.3 # connectivity probability for individuals' W (Gaussian matrices)
-const GENS = 1000 # total number of generations, default 400, small 10
+const GENS = 100 # total number of generations, default 400, small 10
 const ENVS = 50 # total number of possible environmental states an individual can encounter during evolution and lifetime (length of EnvState vector)
 const MAXCONV = 100 # max number of iterations to test for convergence for individuals and founder
 const MUTRATE = 0.1 # mutation rate used in MUTRATE/(cG^2)
