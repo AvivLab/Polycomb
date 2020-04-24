@@ -1,5 +1,5 @@
 # Parameters for polycomb model (Maryl's version)
-const INDTRIALS = 5 # the number of independent trails to run code to find average environmental
+const INDTRIALS = 100 # the number of independent trails to run code to find average environmental
     # and genetic robustness for these independent trails (use in runMultipleIndependentTrails.jl)
 const INDTRIALSFOLDER = "savedPopsForIndTrialsWithSlidingWinAndActualDistAndSigstrOf6" # name of folder to use that contain the .jld
     # files for the independent populations previously generated using generateSavePopulations() function
@@ -7,7 +7,7 @@ const INDTRIALSFOLDER = "savedPopsForIndTrialsWithSlidingWinAndActualDistAndSigs
 const G = 50 # number of genes per individual, default 10, small 3
 const N = 500 # population size, default 500, small 10 (N individuals)
 const C = 0.3 # connectivity probability for individuals' W (Gaussian matrices)
-const GENS = 100 # total number of generations, default 400, small 10
+const GENS = 1000 # total number of generations, default 400, small 10
 const ENVS = 50 # total number of possible environmental states an individual can encounter during evolution and lifetime (length of EnvState vector)
 const MAXCONV = 100 # max number of iterations to test for convergence for individuals and founder
 const MUTRATE = 0.1 # mutation rate used in MUTRATE/(cG^2)
@@ -21,7 +21,7 @@ const SIGSTR = 6.0 # sigmoid stretch ("a" in "sigma s" equation)
 const POLYMUTRATE = 0.1 # "T" in Saurabh paper if divide this by G; mutation rate for vector of genes that are susceptible to polycomb
 const GENETHRESH = 0.15 # critical threshold to measure if polycomb susceptible genes are expressed or not (gamma); 0.05 originally
 # randNum = rand(1:1000)
-const randNum = 107
+const randNum = 210
 const RANDSEEDNUM = collect(randNum:(INDTRIALS+randNum+1))# If want random vector of random seeds to use then use: collect(randNum:(INDTRIALS+randNum+1)). If want to directly input random seed vector used in past run of code then manually input that vector that is saved in "resultsWriteUp.txt". # random seed to use for each independent trial
 const PRCS = 2 # number of different types of PcG (Polycomb group protein) repressive complexes (PRCs) that can function in each individual
 const PRCTOTAL = sum(map(x -> binomial(PRCS,x), 1:PRCS)) # number of different combinations of PRC(s) that can affect one gene

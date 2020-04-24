@@ -1,6 +1,6 @@
 # This script converts the commands in polycomb_var.txt into a series of bash
 # scripts which upload the results to cloud storage.
-with open("polycomb_var.txt", "r") as f:
+with open("PolycombCode/src/polycomb_var.txt", "r") as f:
     commands = f.readlines()
 
 for command in commands:
@@ -13,5 +13,5 @@ for command in commands:
     script.append("echo \"Running job for $num\"\n")
     script.append("{0}".format(command))
     script.append("python3 upload.py polycomb $num results/$num\n")
-    with open("../scripts/{0}.sh".format(number), "w") as f:
+    with open("PolycombCode/scripts/{0}.sh".format(number), "w") as f:
         f.writelines(script)
