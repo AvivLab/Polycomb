@@ -16,6 +16,12 @@ spec:
         command: ["bash", "scripts/2020_174.sh"]
         resources:
           requests:
-            memory: 1000Mi
+            memory: 2000Mi
             cpu: 1000m
+      tolerations:
+      - key: "persistent"
+        operator: "Exists"
+        effect: "NoSchedule"
+      nodeSelector:
+        persistent: "True"
       restartPolicy: Never

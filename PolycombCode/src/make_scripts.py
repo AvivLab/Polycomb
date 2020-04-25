@@ -15,3 +15,5 @@ for command in commands:
     script.append("python3 upload.py polycomb $num results/$num\n")
     with open("PolycombCode/scripts/{0}.sh".format(number), "w") as f:
         f.writelines(script)
+
+print("Wrote scripts.")

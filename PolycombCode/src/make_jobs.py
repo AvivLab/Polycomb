@@ -13,3 +13,5 @@ for dirname in dirs:
     job = job.replace("XXX", clean_job_name)
     with open("jobs/{0}.yaml".format(clean_job_name), "w") as j:
         j.write(job)
+
+print("Wrote Jobs")
